@@ -449,14 +449,15 @@ entities:
           - dps_val: null
             value: false
           - value: true
-  # Weekly mowing schedule. dp110 (MachineAppointment) is a 70-byte raw
-  # blob: 14x 5-byte records (7 weekdays x 2 daily slots), each record
-  # [weekday, start_hour, start_min, end_hour, end_min]. Both daily slots
-  # are exposed: "<Day> mow start/end" for the first period, and
-  # "<Day> mow start 2/end 2" for the second period.
-  # The device only accepts writes to dp110 while docked/charging, not
-  # while mowing. On a fresh device/HA restart, dp110 may not have been
-  # read yet - press "Query schedule" once before editing these.
+  # Weekly mow schedule (dp110, MachineAppointment): 70 raw bytes, 14
+  # records of 5 bytes (7 weekdays x 2 daily periods), each record is
+  # [weekday, start_hour, start_min, end_hour, end_min].
+  # dp110 only accepts writes while the mower is docked or charging; it
+  # silently ignores writes while mowing. After HA restarts, press
+  # "Query schedule" once so the integration has a value to merge into
+  # before editing any of the times below.
+  # Name prefixes below use zero-width spaces to force weekday order,
+  # since Home Assistant always sorts entities alphabetically.
   - entity: time
     name: "Monday mow start"
     icon: "mdi:clock-start"
