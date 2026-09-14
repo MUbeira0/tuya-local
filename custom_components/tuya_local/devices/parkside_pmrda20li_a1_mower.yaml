@@ -451,9 +451,9 @@ entities:
           - value: true
   # Weekly mowing schedule. dp110 (MachineAppointment) is a 70-byte raw
   # blob: 14x 5-byte records (7 weekdays x 2 daily slots), each record
-  # [weekday, start_hour, start_min, end_hour, end_min]. Only the first
-  # daily slot (offsets 0-34) is exposed here; a second slot per day
-  # (offsets 35-69) exists in the raw data but isn't mapped yet.
+  # [weekday, start_hour, start_min, end_hour, end_min]. Both daily slots
+  # are exposed: "<Day> mow start/end" for the first period, and
+  # "<Day> mow start 2/end 2" for the second period.
   # The device only accepts writes to dp110 while docked/charging, not
   # while mowing. On a fresh device/HA restart, dp110 may not have been
   # read yet - press "Query schedule" once before editing these.
@@ -747,6 +747,300 @@ entities:
         type: base64
         name: minute
         mask: "00000000000000000000000000000000000000000000000000000000000000000000ff0000000000000000000000000000000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Monday mow start 2
+    icon: "mdi:clock-start"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "000000000000000000000000000000000000000000000000000000000000000000000000ff000000000000000000000000000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "00000000000000000000000000000000000000000000000000000000000000000000000000ff0000000000000000000000000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Monday mow end 2
+    icon: "mdi:clock-end"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "0000000000000000000000000000000000000000000000000000000000000000000000000000ff00000000000000000000000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "000000000000000000000000000000000000000000000000000000000000000000000000000000ff000000000000000000000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Tuesday mow start 2
+    icon: "mdi:clock-start"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00000000000000000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff000000000000000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Tuesday mow end 2
+    icon: "mdi:clock-end"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff0000000000000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00000000000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Wednesday mow start 2
+    icon: "mdi:clock-start"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff0000000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Wednesday mow end 2
+    icon: "mdi:clock-end"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff000000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff0000000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Thursday mow start 2
+    icon: "mdi:clock-start"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff000000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff0000000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Thursday mow end 2
+    icon: "mdi:clock-end"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff000000000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Friday mow start 2
+    icon: "mdi:clock-start"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff000000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Friday mow end 2
+    icon: "mdi:clock-end"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff0000000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00000000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Saturday mow start 2
+    icon: "mdi:clock-start"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff0000000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Saturday mow end 2
+    icon: "mdi:clock-end"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff000000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff0000000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Sunday mow start 2
+    icon: "mdi:clock-start"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff000000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff0000"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+  - entity: time
+    name: Sunday mow end 2
+    icon: "mdi:clock-end"
+    category: config
+    dps:
+      - id: 110
+        type: base64
+        name: hour
+        mask: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00"
+        optional: true
+        mapping:
+          - dps_val: 136
+            value: 0
+      - id: 110
+        type: base64
+        name: minute
+        mask: "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff"
         optional: true
         mapping:
           - dps_val: 136
