@@ -229,7 +229,7 @@ entities:
         name: error_log
         optional: true
   - entity: sensor
-    name: Problem
+    name: Last warning
     icon: "mdi:robot-mower-outline"
     icon_priority: 2
     class: enum
