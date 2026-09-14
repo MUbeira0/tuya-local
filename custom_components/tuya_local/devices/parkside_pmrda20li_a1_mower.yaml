@@ -123,6 +123,21 @@ entities:
         optional: true
         name: alt
   - entity: binary_sensor
+    class: battery_charging
+    category: diagnostic
+    dps:
+      - id: 101
+        type: string
+        name: sensor
+        optional: true
+        persist: false
+        mapping:
+          - dps_val: CHARGING
+            value: true
+          - dps_val: CHARGING_WITH_TASK_SUSPEND
+            value: true
+          - value: false
+  - entity: binary_sensor
     class: problem
     category: diagnostic
     dps:
@@ -395,6 +410,7 @@ entities:
             value: Garden
   - entity: binary_sensor
     name: Cover
+    class: opening
     category: diagnostic
     dps:
       - id: 116
