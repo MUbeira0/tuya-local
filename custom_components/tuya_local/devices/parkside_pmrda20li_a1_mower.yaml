@@ -458,7 +458,7 @@ entities:
   # while mowing. On a fresh device/HA restart, dp110 may not have been
   # read yet - press "Query schedule" once before editing these.
   - entity: time
-    name: Monday mow start
+    name: "Monday mow start"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -478,7 +478,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Monday mow end
+    name: "​Monday mow end"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -498,7 +498,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Tuesday mow start
+    name: "​​​​Tuesday mow start"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -518,7 +518,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Tuesday mow end
+    name: "​​​​​Tuesday mow end"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -538,7 +538,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Wednesday mow start
+    name: "​​​​​​​​Wednesday mow start"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -558,7 +558,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Wednesday mow end
+    name: "​​​​​​​​​Wednesday mow end"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -578,7 +578,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Thursday mow start
+    name: "​​​​​​​​​​​​Thursday mow start"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -598,7 +598,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Thursday mow end
+    name: "​​​​​​​​​​​​​Thursday mow end"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -618,7 +618,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Friday mow start
+    name: "​​​​​​​​​​​​​​​​Friday mow start"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -638,7 +638,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Friday mow end
+    name: "​​​​​​​​​​​​​​​​​Friday mow end"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -658,7 +658,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Saturday mow start
+    name: "​​​​​​​​​​​​​​​​​​​​Saturday mow start"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -678,7 +678,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Saturday mow end
+    name: "​​​​​​​​​​​​​​​​​​​​​Saturday mow end"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -698,7 +698,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Sunday mow start
+    name: "​​​​​​​​​​​​​​​​​​​​​​​​Sunday mow start"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -718,7 +718,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Sunday mow end
+    name: "​​​​​​​​​​​​​​​​​​​​​​​​​Sunday mow end"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -738,7 +738,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Monday mow start 2
+    name: "​​Monday mow start 2"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -758,7 +758,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Monday mow end 2
+    name: "​​​Monday mow end 2"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -778,7 +778,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Tuesday mow start 2
+    name: "​​​​​​Tuesday mow start 2"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -798,7 +798,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Tuesday mow end 2
+    name: "​​​​​​​Tuesday mow end 2"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -818,7 +818,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Wednesday mow start 2
+    name: "​​​​​​​​​​Wednesday mow start 2"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -838,7 +838,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Wednesday mow end 2
+    name: "​​​​​​​​​​​Wednesday mow end 2"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -858,7 +858,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Thursday mow start 2
+    name: "​​​​​​​​​​​​​​Thursday mow start 2"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -878,7 +878,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Thursday mow end 2
+    name: "​​​​​​​​​​​​​​​Thursday mow end 2"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -898,7 +898,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Friday mow start 2
+    name: "​​​​​​​​​​​​​​​​​​Friday mow start 2"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -918,7 +918,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Friday mow end 2
+    name: "​​​​​​​​​​​​​​​​​​​Friday mow end 2"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -938,7 +938,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Saturday mow start 2
+    name: "​​​​​​​​​​​​​​​​​​​​​​Saturday mow start 2"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -958,7 +958,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Saturday mow end 2
+    name: "​​​​​​​​​​​​​​​​​​​​​​​Saturday mow end 2"
     icon: "mdi:clock-end"
     dps:
       - id: 110
@@ -978,7 +978,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Sunday mow start 2
+    name: "​​​​​​​​​​​​​​​​​​​​​​​​​​Sunday mow start 2"
     icon: "mdi:clock-start"
     dps:
       - id: 110
@@ -998,7 +998,7 @@ entities:
           - dps_val: 136
             value: 0
   - entity: time
-    name: Sunday mow end 2
+    name: "​​​​​​​​​​​​​​​​​​​​​​​​​​​Sunday mow end 2"
     icon: "mdi:clock-end"
     dps:
       - id: 110
